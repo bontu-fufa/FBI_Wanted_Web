@@ -4,6 +4,8 @@ let pageLoader = document.querySelector('.spin');
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    document.body.style.backgroundColor = "red";
+
     fetchWanted();
 })
 
@@ -16,7 +18,7 @@ function fetchWanted() {
         //iterate over each post [100 posts]
         let output = 'success fully fetched '
         // ${posts[title]} ;
-        postDiv3.innerHTML = output;
+        apiBox.innerHTML = output;
     })
     .catch(function(err) {     
         console.log(err);
