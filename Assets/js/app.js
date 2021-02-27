@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function fetchWanted() {
     // fetch(' https://cors-anywhere.herkuapp.com/https://api.fbi.gov/wanted/v1/list')
-    fetch('http://api.fbi.gov/wanted/v1/list')
+    fetch('https://api.fbi.gov/wanted/v1/list')
     .then(function(res) {  return res.json(); //return the JSON Promise
     })
     .then(function(posts) {
