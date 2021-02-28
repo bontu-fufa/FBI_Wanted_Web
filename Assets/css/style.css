@@ -1,9 +1,88 @@
-
-
-.red-bg{
-    background-color: #730d0d;
-    color: white;
+* {
+  position : relative;
 }
+.color-white{
+color: #fff;
+}
+.color-black{
+color: #000;
+}
+.color-blueblack{
+color: #004E64;
+}
+.card-details{
+font-size: .6rem;
+
+}
+.img-adjust{
+width: 100%;
+height: 270px;}
+
+
+
+.overlay-div{
+height:100%;
+width: 100%;
+position:absolute;
+background-color:#000;
+opacity:.0;
+}
+
+.card-horizontal {
+display: flex;
+flex: 1 1 auto;
+}
+
+
+.btn-outline {
+color: #4fbfa8;
+background-color: #ffffff;
+border-color: #4fbfa8;
+font-weight: bold;
+letter-spacing: 0.05em;
+}
+
+.btn-outline {
+color: #4fbfa8;
+background-color: #ffffff;
+border-color: #4fbfa8;
+font-weight: bold;
+border-radius: 0;
+}
+
+.btn-outline:hover,
+.btn-outline:active,
+.btn-outline:focus,
+.btn-outline.active {
+background: #4fbfa8;
+color: #ffffff;
+border-color: #4fbfa8;
+
+}
+
+
+.btn-fill-1 {
+color: #fff;
+background-color: #004E64;
+border-color: #004E64;
+font-weight: bold;
+letter-spacing: 0.05em;
+border-radius: 0;
+}
+
+.btn-fill-1:hover,
+.btn-fill-1:active,
+.btn-fill-1:focus,
+.btn-colour-1.active {
+/* let's darken #004E64 a bit for hover effect */
+background: #003D4F;
+color: #ffffff;
+border-color: #003D4F;
+}
+
+
+
+
 
 
 /* ####################### Hero Section ########################### */
