@@ -1,7 +1,7 @@
 let displayBox = document.querySelector('#cards')
 
 let pageLoader = document.querySelector('.spin');
-
+let log = console.log
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -11,7 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function fetchWanted() {
     // fetch(' https://cors-anywhere.herkuapp.com/https://api.fbi.gov/wanted/v1/list')
     fetch('https://api.fbi.gov/wanted', { mode: "no-cors" })
-    .then(res => res.json()) //return the JSON Promise
+    .then(response  => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })//return the JSON Promise
     .then(function(jsonData) {
         let items = jsonData.items;
         let outputs = '';
