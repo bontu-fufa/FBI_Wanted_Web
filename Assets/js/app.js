@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function fetchWanted() {
     // fetch(' https://cors-anywhere.herkuapp.com/https://api.fbi.gov/wanted/v1/list')
     fetch('https://api.fbi.gov/wanted', { mode: "no-cors" })
-    .then(response => response.json()) //return the JSON Promise
+    .then(res => res.json()) //return the JSON Promise
     .then(function(jsonData) {
         let items = jsonData.items;
         let outputs = '';
