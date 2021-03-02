@@ -1,6 +1,17 @@
 let displayBox = document.querySelector('#cards')
 let pageLoader = document.querySelector('.spin');
 
+// Filters
+var cyber = document.querySelector("#Cybers_Most_Wanted");
+var murders = document.querySelector("#Violent_Crime_Murders");
+var seeking = document.querySelector('#Seeking_Information')
+var white = document.querySelector('#White-Collar_Crime')
+var kidnapping = document.querySelector('#Kidnappings_and_Missing_Persons')
+var vicap = document.querySelector('#ViCAP_Unidentified_Persons')
+var additional = document.querySelector('#Additional_Violent_Crimes')
+
+
+
 // log variable
 let log = console.log
 
