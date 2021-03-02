@@ -17,7 +17,7 @@ let log = console.log
 
 document.addEventListener('DOMContentLoaded', () => {
     // load all 
-    // fetchWanted();
+    fetchWanted();
 
     // get filters
     
