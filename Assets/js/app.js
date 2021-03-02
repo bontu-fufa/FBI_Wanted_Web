@@ -17,9 +17,37 @@ let log = console.log
 
 document.addEventListener('DOMContentLoaded', () => {
     // load all 
-    fetchWanted();
+    // fetchWanted();
 
-    // get filters 
+    // get filters
+    
+    cyber.addEventListener("click", ()=>{
+
+        filter_crime("Cyber's_Most_Wanted")
+    });       
+    murders.addEventListener("click", ()=>{
+      filter_crime("Violent_Crime_- Murders")
+  });   
+  seeking.addEventListener("click", ()=>{
+
+    filter_crime("Seeking_Information")
+  });   
+  white.addEventListener("click", ()=>{
+
+  filter_crime("White-Collar_Crime")
+});   
+kidnapping.addEventListener("click", ()=>{
+
+  filter_crime("Kidnappings_and_Missing_Persons")
+}); 
+vicap.addEventListener("click", ()=>{
+
+  filter_crime("ViCAP_Unidentified_Persons")
+}); 
+additional.addEventListener("click", ()=>{
+
+  filter_crime("Additional_Violent_Crimes")
+}); 
 
 })
 
@@ -36,15 +64,6 @@ const fetchJson = async function(){
 
 
 // filter crime
-var cyber = document.querySelector("#Cybers_Most_Wanted");
-var murders = document.querySelector("#Violent_Crime_Murders");
-var seeking = document.querySelector('#Seeking_Information')
-var white = document.querySelector('#White-Collar_Crime')
-var kidnapping = document.querySelector('#Kidnappings_and_Missing_Persons')
-var vicap = document.querySelector('#ViCAP_Unidentified_Persons')
-var additional = document.querySelector('#Additional_Violent_Crimes')
-
-
 var filter_crime = function(choosen){
   fetchJson().then(jsonData =>{
     displayBox.innerHTML= '';
@@ -123,7 +142,7 @@ var filter_crime = function(choosen){
     })
 
 
-    html += (total_crime > 1) ? <p>${total_crime} results are found! </p> : <p>${total_crime} result is found! </p> 
+    html += (total_crime > 1) ? `<p>${total_crime} results are found! </p>` : `<p>${total_crime} result is found! </p>` 
 
     log(html)
     displayBox.innerHTML = html;
