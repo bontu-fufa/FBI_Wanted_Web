@@ -22,7 +22,59 @@ const fetchJson = async function(){
 
 // fetch all
 
-
+function fetchWanted(){
+    fetchJson().then(jsonData => {
+         var items = jsonData.items
+ 
+         // iterate over items 
+         var outputs = '';
+         items.forEach(item => {
+           // json extracts - start
+ 
+             // first image
+             var images = item.images
+             var imagesUrl = images[0].original
+ 
+             // name - Title
+             var name = item.title
+ 
+             // files - english will be filtered 
+             var files = item.files 
+             var firstFileUrl = files[0].url
+ 
+             // reward text 
+             var rewardTxt = !(item.reward_text === null) ? item.reward_text : 'reward not mentioned'
+             
+             // description
+             var description = item.description
+             
+             // subject
+             var subjects = item.subjects.length > 0 ? (item.subjects[0]) :  'subjects not mentioned'
+             
+             // uid 
+             var uidid = item.uid 
+             // modal id 
+             var idd = `#${uidid}`
+        
+             
+             
+             log(`image_URL ${imagesUrl}` )
+             log(`file_URL ${firstFileUrl}` )
+             log(`reward-text ${rewardTxt}` )
+             log(`subject-text ${subjects}` )
+             log(`uidid ${uidid}`)
+             log(`modal id ${idd}`)
+             log('--------------------------------------------------------------------------')
+           // json extracts - end
+ 
+         });
+ 
+         
+     displayBox.innerHTML = outputs;
+     })
+     .catch((err) => { console.log(err); })
+     
+ }
 
 // filter crime
 
