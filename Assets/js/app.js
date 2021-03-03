@@ -87,7 +87,7 @@ function fetchWanted(){
                        ${rewardTxt}
                        </em> </p>
                        <button class="btn btn-fill-1 mt-2" style="width:100%"><i class="fa fa-download"></i>
-                       <a href="${firstFileUrl}" class="color-white" "> Download File</a>
+                       <a href="${firstFileUrl}" class="color-white" download="download.pdf"> Download File</a>
                        </button>
 
                    </div>
