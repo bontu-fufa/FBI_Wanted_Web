@@ -1,14 +1,51 @@
 let displayBox = document.querySelector('#cards')
-
 let pageLoader = document.querySelector('.spin');
+
+// log variable
 let log = console.log
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    // load all 
     fetchWanted();
+
+    // get filters 
+
 })
 
-function fetchWanted() {
+
+// get json file 
+const fetchJson = async function(){
+    var response = await fetch("assets/js/json/api.json"); 
+    var parsed = await response.json()
+    return parsed
+}
+
+// fetch all
+
+
+
+// filter crime
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// not working 
+function fetchWantedFromApi() {
     // fetch(' https://cors-anywhere.herkuapp.com/https://api.fbi.gov/wanted/v1/list')
     fetch('https://api.fbi.gov/wanted', { mode: "no-cors" })
     .then(response  => {
