@@ -66,7 +66,62 @@ function fetchWanted(){
              log(`modal id ${idd}`)
              log('--------------------------------------------------------------------------')
            // json extracts - end
- 
+           outputs += `<div class="col-12 my-3">
+           <div class="card ">
+               <div class="card-horizontal row">
+                   
+                   <div class="card-body col-md-9">
+                       
+                       <div class="d-flex justify-content-between">
+                           <h4 class="card-title text-center color-blueblack"> ${name}</h4>
+                           <button type="button" class=" btn  btn-outline border-0" data-toggle="modal" data-target="${idd}" >
+                        <i class="fa fa-info-circle" aria-hidden="true" ></i></button>
+                       </div>
+                       <p><small>Subjects </small></p>
+                       <p class="card-text color-black">
+                       ${subjects}
+                       </p>
+
+                       <p><Small>Reward</Small></p>
+                       <p class="card-text color-black "> <em>
+                       ${rewardTxt}
+                       </em> </p>
+                       <button class="btn btn-fill-1 mt-2" style="width:100%"><i class="fa fa-download"></i>
+                       <a href="${firstFileUrl}" class="color-white" "> Download File</a>
+                       </button>
+
+                   </div>
+                   <div class="img-square-wrapper col-md-3 ">
+                       <img class="img-adjust" src="${imagesUrl}" alt="Card image cap">
+                   </div>
+               </div>
+               </div>
+               </div>
+
+
+               <!-- Modal -->
+               <div class="modal fade" id="${uidid}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                 <div class="modal-dialog" role="document">
+                   <div class="modal-content">
+                     <div class="modal-header">
+                       <h5 class="modal-title" id="exampleModalLongTitle">${name}</h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                       </button>
+                     </div>
+                     <div class="modal-body">
+                       <p class="text-center"> some Descriptions</p>
+                        
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                       <button type="button" class="btn btn-primary">Save changes</button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+              
+         `
          });
  
          
