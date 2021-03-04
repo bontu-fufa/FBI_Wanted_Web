@@ -26,6 +26,9 @@ display: flex;
 flex: 1 1 auto;
 }
 
+.spin{
+  margin-left: 35rem;
+}
 
 .btn-outline {
 color: #4fbfa8;
