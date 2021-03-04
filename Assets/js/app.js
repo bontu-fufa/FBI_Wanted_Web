@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // get json file 
 const fetchJson = async function(){
-    var response = await fetch("assets/js/json/api.json"); 
+    var response = await fetch("Assets/js/json/api.json"); 
     var parsed = await response.json()
     return parsed
 }
